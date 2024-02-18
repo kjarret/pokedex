@@ -17,7 +17,7 @@ function PokemonCard() {
       name: "mewto",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
-      backgroundColor: "rgb(118, 49, 150)",
+      backgroundColor: "#9A7A98",
     },
     {
       name: "Raiquaza",
