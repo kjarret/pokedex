@@ -13,7 +13,7 @@
 
 .card:hover {
   transition: 0.3s ease;
-  filter: drop-shadow(0 0 2rem rgb(140, 222, 250));
+  filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
 }
 
 .cardImg {

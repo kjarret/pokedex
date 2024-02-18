@@ -2,41 +2,53 @@ import styles from "../style/PokemonCard.module.css";
 import "../style/index.css";
 
 function PokemonCard() {
-  const card = {
-    width: "200px",
-    padding: "1rem",
-    backgroundColor: "lightsalmon",
-    borderRadius: "5px",
-    boxShadow: "0px 0px 5px gray",
-    color: "white",
-    fontSize: "1.6rem",
-    textAlign: "center",
-    textShadow: "0px 0px 5px gray",
-    transition: "0.3s ease",
-  };
+  const pokemonList = [
+    {
+      name: "bulbasaur",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      backgroundColor: "lightgreen",
+    },
+    {
+      name: "mew",
+      backgroundColor: "lightblue",
+    },
+    {
+      name: "mewto",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+      backgroundColor: "rgb(118, 49, 150)",
+    },
+    {
+      name: "Raiquaza",
+      backgroundColor: "darkgreen",
+    },
+  ];
 
   return (
     <div className="displayCard">
-      <figure className="card">
-        <img
-          className="card-img"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-          alt="Bulbasaur"
-        />
-        <figcaption>Bulbasaur</figcaption>
-      </figure>
-      <figure style={card}>
+      {pokemonList.map((pokemon, index) => (
+        <figure
+          key={index}
+          className="card"
+          style={{ backgroundColor: pokemon.backgroundColor }}
+        >
+          {pokemon.imgSrc ? (
+            <img className="card-img" src={pokemon.imgSrc} alt={pokemon.name} />
+          ) : (
+            <p>???</p>
+          )}
+          <figcaption>{pokemon.name}</figcaption>
+        </figure>
+      ))}
+      <figure
+        className={styles.card}
+        style={{ backgroundColor: "lightsalmon" }}
+      >
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
           alt="charmander"
-          style={{
-            width: "100%",
-            height: "auto",
-            marginBottom: "0.5rem",
-            backgroundColor: "white",
-            borderRadius: "inherit",
-            boxShadow: "inherit",
-          }}
+          className={styles.cardImg}
         />
         <figcaption>charmander</figcaption>
       </figure>

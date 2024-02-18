@@ -1,7 +1,6 @@
 .card {
   width: 200px;
   padding: 1rem;
-  background-color: lightgreen;
   border-radius: 5px;
   box-shadow: 0px 0px 5px gray;
   color: white;
@@ -13,7 +12,7 @@
 
 .card:hover {
   transition: 0.3s ease;
-  filter: drop-shadow(0 0 2rem rgb(184, 255, 184));
+  filter: drop-shadow(0 0 2rem rgb(255, 255, 255));
 }
 
 .card-img {
